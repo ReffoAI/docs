@@ -4,7 +4,7 @@ Pelagora is an open, decentralized peer-to-peer marketplace network. It consists
 
 | Package | What it does | npm |
 |---|---|---|
-| **[Pelagora Node](/pelagora/)** | Local marketplace node with web UI, REST API, and DHT networking | `pelagora` |
+| **[Beacon](/beacon/)** | Local marketplace node with web UI, REST API, and DHT networking | `pelagora` |
 | **[PIM Protocol](/pim-protocol/)** | Shared TypeScript types and category schemas | `@pelagora/pim-protocol` |
 | **[MCP Server](/mcp-server/)** | AI assistant integration via Model Context Protocol | `@pelagora/mcp` |
 | **[CLI Installer](/cli-installer/)** | Interactive setup wizard | `pelagora-cli-installer` |

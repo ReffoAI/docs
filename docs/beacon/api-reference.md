@@ -1,4 +1,4 @@
-# API Reference
+# <span class="breadcrumb-parent">Beacon ›</span> API Reference
 
 The Pelagora node exposes a REST API on the configured port (default `3737`). All request/response bodies use JSON.
 

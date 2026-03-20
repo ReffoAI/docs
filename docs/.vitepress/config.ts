@@ -7,26 +7,21 @@ export default defineConfig({
     /^http:\/\/localhost/,
   ],
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/pelagora-logo_sm.png' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap', rel: 'stylesheet' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap', rel: 'stylesheet' }],
   ],
   themeConfig: {
-    logo: '/logo.svg',
+    logo: {
+      light: '/pelagora-logo.png',
+      dark: '/pelagora-logo_reverse.png',
+    },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
-      { text: 'Pelagora Node', link: '/pelagora/' },
-      { text: 'PIM Protocol', link: '/pim-protocol/' },
-      { text: 'MCP Server', link: '/mcp-server/' },
-      {
-        text: 'More',
-        items: [
-          { text: 'CLI Installer', link: '/cli-installer/' },
-          { text: 'Guides', link: '/guides/building-skills' },
-          { text: 'Glossary', link: '/reference/glossary' },
-        ],
-      },
+      { text: 'CLI Installer', link: '/cli-installer/' },
+      { text: 'Guides', link: '/guides/building-skills' },
+      { text: 'Glossary', link: '/reference/glossary' },
     ],
     sidebar: {
       '/getting-started/': [
@@ -39,18 +34,18 @@ export default defineConfig({
           ],
         },
       ],
-      '/pelagora/': [
+      '/beacon/': [
         {
-          text: 'Pelagora Node',
+          text: 'Beacon',
           items: [
-            { text: 'Overview', link: '/pelagora/' },
-            { text: 'Installation', link: '/pelagora/installation' },
-            { text: 'Web UI', link: '/pelagora/web-ui' },
-            { text: 'API Reference', link: '/pelagora/api-reference' },
-            { text: 'Data Model', link: '/pelagora/data-model' },
-            { text: 'DHT Networking', link: '/pelagora/dht-networking' },
-            { text: 'Sync', link: '/pelagora/sync' },
-            { text: 'Configuration', link: '/pelagora/configuration' },
+            { text: 'Overview', link: '/beacon/' },
+            { text: 'Installation', link: '/beacon/installation' },
+            { text: 'Web UI', link: '/beacon/web-ui' },
+            { text: 'API Reference', link: '/beacon/api-reference' },
+            { text: 'Data Model', link: '/beacon/data-model' },
+            { text: 'DHT Networking', link: '/beacon/dht-networking' },
+            { text: 'Sync', link: '/beacon/sync' },
+            { text: 'Configuration', link: '/beacon/configuration' },
           ],
         },
       ],
@@ -111,7 +106,7 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025 Pelagora',
+      copyright: 'Copyright © 2026 Pelagora',
     },
   },
 })

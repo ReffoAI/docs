@@ -4,16 +4,16 @@ Key terms used throughout the Pelagora documentation.
 
 ## Core concepts
 
-**Ref**
+**[Ref](/beacon/data-model)**
 : A reference to a physical item — the basic unit of inventory in Pelagora. Contains title, description, category, price, condition, traits, and media.
 
-**Node**
-: A running instance of the Pelagora software. Each user operates their own node locally.
+**[Beacon](/beacon/)**
+: A running instance of the Pelagora software. Each user operates their own Beacon locally.
 
-**PIM Protocol**
+**[PIM Protocol](/pim-protocol/)**
 : Personal Inventory Management Protocol — the shared type system that defines how data is structured across the network.
 
-**DHT**
+**[DHT](/beacon/dht-networking)**
 : Distributed Hash Table — the decentralized peer discovery mechanism (Hyperswarm) that lets nodes find each other without a central server.
 
 ## Network
@@ -21,7 +21,7 @@ Key terms used throughout the Pelagora documentation.
 **Peer**
 : Another node on the network that your node has discovered and connected to.
 
-**Hyperswarm**
+**[Hyperswarm](/beacon/dht-networking)**
 : The DHT implementation used by Pelagora for peer discovery and direct encrypted connections.
 
 **Topic**
@@ -43,21 +43,21 @@ Key terms used throughout the Pelagora documentation.
 
 ## AI integration
 
-**MCP**
+**[MCP](/mcp-server/)**
 : Model Context Protocol — an open standard for connecting AI assistants to external tools and data sources.
 
-**MCP Server**
+**[MCP Server](/mcp-server/)**
 : The bridge between a Pelagora node and an AI assistant. Exposes node capabilities as tools.
 
-**Tool**
+**[Tool](/mcp-server/tools)**
 : An MCP capability that an AI assistant can invoke (e.g., `create_item`, `search_network`).
 
 ## Extensions
 
-**Skill**
+**[Skill](/guides/building-skills)**
 : A plugin that extends Pelagora with new capabilities — routes, DHT messages, MCP tools, and database tables.
 
-**Category Schema**
+**[Category Schema](/guides/adding-categories)**
 : A definition of structured attributes for a product type, aligned with Schema.org vocabulary.
 
 **Traits**

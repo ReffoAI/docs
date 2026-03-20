@@ -1,4 +1,4 @@
-# Sync
+# <span class="breadcrumb-parent">Beacon ›</span> Sync
 
 Pelagora nodes can optionally sync with the Reffo cloud platform for backup, cross-device access, and enhanced discovery.
 

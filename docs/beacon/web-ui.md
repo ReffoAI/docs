@@ -1,4 +1,4 @@
-# Web UI
+# <span class="breadcrumb-parent">Beacon ›</span> Web UI
 
 Pelagora includes a built-in web interface accessible at `http://localhost:3737` (default port).
 
