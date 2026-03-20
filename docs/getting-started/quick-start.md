@@ -79,6 +79,6 @@ Now you can manage your inventory and search the network through natural languag
 ## Next steps
 
 - [Architecture →](/getting-started/architecture) — How the pieces fit together
-- [Web UI Guide →](/beacon/web-ui) — Using the built-in interface
-- [API Reference →](/beacon/api-reference) — Full REST API documentation
-- [MCP Tools →](/mcp-server/tools) — All available AI assistant commands
+- [Web UI Guide →](/glossary/pelagora/web-ui) — Using the built-in interface
+- [API Reference →](/glossary/beacon/api-reference) — Full REST API documentation
+- [MCP Tools →](/glossary/mcp-server/tools) — All available AI assistant commands

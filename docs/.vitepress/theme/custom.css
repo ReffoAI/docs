@@ -136,17 +136,62 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.45;
 }
 
-/* Sidebar — larger group title */
-.VPSidebarItem.level-0 > .item > .text {
-  font-size: 1.1rem;
+/* Sidebar — top-level section title (e.g. Glossary, Guides) */
+.VPSidebarItem.level-0:first-child > .item > .text {
+  font-size: 16px;
   font-weight: 700;
   font-family: 'Fira Sans', sans-serif;
+}
+
+/* Sidebar — page titles (e.g. Beacon, Pelagora) — override heading font */
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* Bold section header only when user is in that specific section */
+.VPSidebarItem.level-0.is-active > .item > .text {
+  font-weight: 700;
+}
+
+/* Sidebar — page titles (14px) */
+.VPSidebarItem.level-1 > .item .link > .text {
+  font-size: 14px;
+}
+
+/* Sidebar — sub-topics (13px) */
+.VPSidebarItem.level-2 > .item .link > .text {
+  font-size: 13px;
 }
 
 /* Breadcrumb-style page titles */
 .breadcrumb-parent {
   font-weight: 400;
   color: var(--vp-c-text-2);
+}
+
+/* Site logo and title */
+.VPNavBarTitle .logo {
+  height: 32px;
+  width: auto;
+}
+
+.VPNavBarTitle .title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Nav bar items — bigger and bold when active */
+.VPNavBarMenuLink {
+  font-size: 1rem !important;
+}
+
+.VPNavBarMenuLink.active {
+  font-weight: 700;
 }
 
 /* Wider search box on desktop */

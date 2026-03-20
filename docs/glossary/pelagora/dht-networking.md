@@ -1,4 +1,4 @@
-# <span class="breadcrumb-parent">Beacon ›</span> DHT Networking
+# <span class="breadcrumb-parent">Pelagora ›</span> DHT Networking
 
 Pelagora uses the [Hyperswarm](https://docs.pears.com/building-blocks/hyperswarm) DHT for decentralized peer discovery and communication.
 

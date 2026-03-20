@@ -10,7 +10,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/pelagora-logo_sm.png' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap', rel: 'stylesheet' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Josefin+Sans:wght@600&display=swap', rel: 'stylesheet' }],
   ],
   themeConfig: {
     logo: {
@@ -21,7 +21,7 @@ export default defineConfig({
       { text: 'Getting Started', link: '/getting-started/' },
       { text: 'CLI Installer', link: '/cli-installer/' },
       { text: 'Guides', link: '/guides/building-skills' },
-      { text: 'Glossary', link: '/reference/glossary' },
+      { text: 'Glossary', link: '/glossary/', activeMatch: '/glossary/' },
     ],
     sidebar: {
       '/getting-started/': [
@@ -34,41 +34,73 @@ export default defineConfig({
           ],
         },
       ],
-      '/beacon/': [
+      '/glossary/': [
+        {
+          text: 'Glossary',
+          items: [
+            { text: 'Overview', link: '/glossary/' },
+          ],
+        },
+        {
+          text: 'Pelagora',
+          collapsed: true,
+          items: [
+            { text: 'Overview', link: '/glossary/pelagora/' },
+            { text: 'Web UI', link: '/glossary/pelagora/web-ui' },
+            { text: 'Ref', link: '/glossary/pelagora/ref' },
+            { text: 'DHT Networking', link: '/glossary/pelagora/dht-networking' },
+          ],
+        },
         {
           text: 'Beacon',
+          collapsed: true,
           items: [
-            { text: 'Overview', link: '/beacon/' },
-            { text: 'Installation', link: '/beacon/installation' },
-            { text: 'Web UI', link: '/beacon/web-ui' },
-            { text: 'API Reference', link: '/beacon/api-reference' },
-            { text: 'Data Model', link: '/beacon/data-model' },
-            { text: 'DHT Networking', link: '/beacon/dht-networking' },
-            { text: 'Sync', link: '/beacon/sync' },
-            { text: 'Configuration', link: '/beacon/configuration' },
+            { text: 'Overview', link: '/glossary/beacon/' },
+            { text: 'Installation', link: '/glossary/beacon/installation' },
+            { text: 'API Reference', link: '/glossary/beacon/api-reference' },
+            { text: 'Sync', link: '/glossary/beacon/sync' },
+            { text: 'Configuration', link: '/glossary/beacon/configuration' },
           ],
         },
-      ],
-      '/pim-protocol/': [
         {
           text: 'PIM Protocol',
+          collapsed: true,
           items: [
-            { text: 'Overview', link: '/pim-protocol/' },
-            { text: 'Types', link: '/pim-protocol/types' },
-            { text: 'Schemas', link: '/pim-protocol/schemas' },
-            { text: 'Utilities', link: '/pim-protocol/utilities' },
+            { text: 'Overview', link: '/glossary/pim-protocol/' },
+            { text: 'Types', link: '/glossary/pim-protocol/types' },
+            { text: 'Schemas', link: '/glossary/pim-protocol/schemas' },
+            { text: 'Utilities', link: '/glossary/pim-protocol/utilities' },
           ],
         },
-      ],
-      '/mcp-server/': [
         {
           text: 'MCP Server',
+          collapsed: true,
           items: [
-            { text: 'Overview', link: '/mcp-server/' },
-            { text: 'Installation', link: '/mcp-server/installation' },
-            { text: 'Tools', link: '/mcp-server/tools' },
-            { text: 'Prompts', link: '/mcp-server/prompts' },
-            { text: 'Resources', link: '/mcp-server/resources' },
+            { text: 'Overview', link: '/glossary/mcp-server/' },
+            { text: 'Installation', link: '/glossary/mcp-server/installation' },
+            { text: 'Tools', link: '/glossary/mcp-server/tools' },
+            { text: 'Prompts', link: '/glossary/mcp-server/prompts' },
+            { text: 'Resources', link: '/glossary/mcp-server/resources' },
+          ],
+        },
+        {
+          text: 'More Terms',
+          collapsed: true,
+          items: [
+            { text: 'Category Schema', link: '/glossary/#category-schema' },
+            { text: 'DHT', link: '/glossary/#dht' },
+            { text: 'Hyperswarm', link: '/glossary/#hyperswarm' },
+            { text: 'MCP', link: '/glossary/#mcp' },
+            { text: 'Negotiation', link: '/glossary/#negotiation' },
+            { text: 'Offer', link: '/glossary/#offer' },
+            { text: 'Peer', link: '/glossary/#peer' },
+            { text: 'PeerMessage', link: '/glossary/#peermessage' },
+            { text: 'Ref', link: '/glossary/#ref' },
+            { text: 'Skill', link: '/glossary/#skill' },
+            { text: 'Tool', link: '/glossary/#tool' },
+            { text: 'Topic', link: '/glossary/#topic' },
+            { text: 'Traits', link: '/glossary/#traits' },
+            { text: 'Want', link: '/glossary/#want' },
           ],
         },
       ],
@@ -86,12 +118,6 @@ export default defineConfig({
         {
           text: 'CLI Installer',
           items: [{ text: 'Overview', link: '/cli-installer/' }],
-        },
-      ],
-      '/reference/': [
-        {
-          text: 'Reference',
-          items: [{ text: 'Glossary', link: '/reference/glossary' }],
         },
       ],
     },

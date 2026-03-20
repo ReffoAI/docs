@@ -36,7 +36,7 @@ Make sure your Pelagora node is running, then ask Claude something like:
 
 ## Learn more
 
-- [Installation](/mcp-server/installation) — Setup and configuration
-- [Tools](/mcp-server/tools) — All available MCP tools
-- [Prompts](/mcp-server/prompts) — Built-in prompt templates
-- [Resources](/mcp-server/resources) — Exposed MCP resources
+- [Installation](/glossary/mcp-server/installation) — Setup and configuration
+- [Tools](/glossary/mcp-server/tools) — All available MCP tools
+- [Prompts](/glossary/mcp-server/prompts) — Built-in prompt templates
+- [Resources](/glossary/mcp-server/resources) — Exposed MCP resources

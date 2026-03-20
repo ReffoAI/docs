@@ -9,7 +9,7 @@ hero:
       link: /getting-started/
     - theme: alt
       text: API Reference
-      link: /beacon/api-reference
+      link: /glossary/beacon/api-reference
     - theme: alt
       text: GitHub
       link: https://github.com/ReffoAI
@@ -37,22 +37,22 @@ hero:
 
 ## Glossary
 
-Key terms and concepts used across the Pelagora ecosystem. [See full glossary →](/reference/glossary)
+Key terms and concepts used across the Pelagora ecosystem. [See full glossary →](/glossary/)
 
 <div class="glossary-list">
-  <a class="glossary-item" href="/beacon/">
+  <a class="glossary-item" href="/glossary/beacon/">
     <span class="glossary-term">Beacon</span>
     <span class="glossary-def">The node software you run to connect to the Pelagora network.</span>
   </a>
-  <a class="glossary-item" href="/pim-protocol/">
+  <a class="glossary-item" href="/glossary/pim-protocol/">
     <span class="glossary-term">PIM Protocol</span>
     <span class="glossary-def">The shared type system for structuring and exchanging commerce data.</span>
   </a>
-  <a class="glossary-item" href="/beacon/data-model">
+  <a class="glossary-item" href="/glossary/pelagora/ref">
     <span class="glossary-term">Ref</span>
     <span class="glossary-def">A reference to a physical item — the basic unit of inventory in Pelagora.</span>
   </a>
-  <a class="glossary-item" href="/mcp-server/">
+  <a class="glossary-item" href="/glossary/mcp-server/">
     <span class="glossary-term">MCP Server</span>
     <span class="glossary-def">AI integration surface connecting agents and tools to your Beacon.</span>
   </a>
@@ -60,7 +60,7 @@ Key terms and concepts used across the Pelagora ecosystem. [See full glossary �
     <span class="glossary-term">Skill</span>
     <span class="glossary-def">A plugin that extends your Beacon with new routes, tools, and message handlers.</span>
   </a>
-  <a class="glossary-item" href="/beacon/dht-networking">
+  <a class="glossary-item" href="/glossary/pelagora/dht-networking">
     <span class="glossary-term">DHT</span>
     <span class="glossary-def">Distributed Hash Table — decentralized peer discovery without a central server.</span>
   </a>

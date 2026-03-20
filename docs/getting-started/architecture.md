@@ -64,6 +64,6 @@ Pelagora is built as a set of composable packages that work together to form a d
 
 ## Next steps
 
-- [Beacon →](/beacon/) — Deep dive into the node
-- [PIM Protocol →](/pim-protocol/) — Understand the type system
-- [MCP Server →](/mcp-server/) — AI integration details
+- [Beacon →](/glossary/beacon/) — Deep dive into the node
+- [PIM Protocol →](/glossary/pim-protocol/) — Understand the type system
+- [MCP Server →](/glossary/mcp-server/) — AI integration details
