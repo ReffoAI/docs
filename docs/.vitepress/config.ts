@@ -122,7 +122,7 @@ export default defineConfig({
       ],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ReffoAI' },
+      { icon: 'github', link: 'https://github.com/orgs/ReffoAI/repositories' },
     ],
     search: {
       provider: 'local',
