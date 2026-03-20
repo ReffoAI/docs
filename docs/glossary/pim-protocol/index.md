@@ -10,9 +10,9 @@ npm install @pelagora/pim-protocol
 
 ## What's included
 
-- **[Types](/pim-protocol/types)** — Core interfaces: `Ref`, `Offer`, `PeerMessage`, `Want`, and more
-- **[Schemas](/pim-protocol/schemas)** — Schema.org-aligned category schemas for structured product data
-- **[Utilities](/pim-protocol/utilities)** — Helper functions for location blurring, sanitization, and validation
+- **[Types](/glossary/pim-protocol/types)** — Core interfaces: `Ref`, `Offer`, `PeerMessage`, `Want`, and more
+- **[Schemas](/glossary/pim-protocol/schemas)** — Schema.org-aligned category schemas for structured product data
+- **[Utilities](/glossary/pim-protocol/utilities)** — Helper functions for location blurring, sanitization, and validation
 
 ## Design principles
 

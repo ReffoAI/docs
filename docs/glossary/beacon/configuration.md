@@ -1,4 +1,4 @@
-# Configuration
+# <span class="breadcrumb-parent">Beacon ›</span> Configuration
 
 Pelagora can be configured via environment variables or programmatically.
 

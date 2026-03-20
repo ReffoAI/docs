@@ -2,6 +2,18 @@
 
 Get a Pelagora node running in under 2 minutes.
 
+## Start with the AI Skill
+
+The fastest way to get started is with the [Pelagora AI Skill](https://pelagora.org/dev-resources/index.html). Drop a single file into your project and your AI assistant can set up a Beacon, connect to the network, and start building for you.
+
+```bash
+# Copy the skill into your Claude Code project
+mkdir -p .claude/skills
+curl -o .claude/skills/pelagora.md https://pelagora.org/dev-resources/pelagora.md
+```
+
+Once installed, just ask your AI assistant something like *"I want to join the Pelagora network"* and it will handle the rest — scaffolding a Beacon, connecting to the mesh, and setting up the MCP server.
+
 ## Prerequisites
 
 - **Node.js** 18 or later
@@ -79,6 +91,6 @@ Now you can manage your inventory and search the network through natural languag
 ## Next steps
 
 - [Architecture →](/getting-started/architecture) — How the pieces fit together
-- [Web UI Guide →](/pelagora/web-ui) — Using the built-in interface
-- [API Reference →](/pelagora/api-reference) — Full REST API documentation
-- [MCP Tools →](/mcp-server/tools) — All available AI assistant commands
+- [Web UI Guide →](/glossary/pelagora/web-ui) — Using the built-in interface
+- [API Reference →](/glossary/beacon/api-reference) — Full REST API documentation
+- [MCP Tools →](/glossary/mcp-server/tools) — All available AI assistant commands

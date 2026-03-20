@@ -1,4 +1,4 @@
-# Data Model
+# <span class="breadcrumb-parent">Pelagora ›</span> Ref
 
 A **Ref** is the universal base unit in Pelagora. Every listing — whether it's a car, a guitar, or a restaurant voucher — is a Ref. Refs are Schema.org-compatible so they can be understood by search engines, LLMs, and third-party platforms.
 

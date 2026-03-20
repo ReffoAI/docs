@@ -1,4 +1,4 @@
-# Installation
+# <span class="breadcrumb-parent">Beacon ›</span> Installation
 
 ## npm (recommended)
 

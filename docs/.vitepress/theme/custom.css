@@ -1,14 +1,215 @@
 :root {
-  --vp-font-family-base: 'Poppins', sans-serif;
-  --vp-c-brand-1: #3b82f6;
-  --vp-c-brand-2: #2563eb;
-  --vp-c-brand-3: #1d4ed8;
-  --vp-c-brand-soft: rgba(59, 130, 246, 0.14);
+  --vp-font-family-base: 'DM Sans', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Pelagora brand — light mode */
+  --vp-c-brand-1: #0A5E8A; /* Deep Ocean */
+  --vp-c-brand-2: #1A8A7D; /* Teal */
+  --vp-c-brand-3: #2D8A6E; /* Aegean */
+  --vp-c-brand-soft: rgba(10, 94, 138, 0.12);
+
+  --vp-c-text-1: #1A1A2E; /* Ink */
+  --vp-c-text-2: #4A5568; /* Slate */
+  --vp-c-bg: #FFFFFF;
+  --vp-c-bg-soft: #f6f6f7;
+  --vp-c-bg-alt: #f6f6f7;
 }
 
-.dark {
-  --vp-c-brand-1: #60a5fa;
-  --vp-c-brand-2: #3b82f6;
-  --vp-c-brand-3: #2563eb;
-  --vp-c-brand-soft: rgba(96, 165, 250, 0.14);
+html.dark {
+  /* Pelagora brand — dark mode */
+  --vp-c-brand-1: #5BA8F5; /* Sky — lighter for contrast on dark */
+  --vp-c-brand-2: #3DBDB0; /* Teal — brighter */
+  --vp-c-brand-3: #4A90D9; /* Deep Ocean — lighter */
+  --vp-c-brand-soft: rgba(91, 168, 245, 0.14);
+
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.8);
+  --vp-c-bg: #1b1b1f;
+  --vp-c-bg-soft: #252529;
+  --vp-c-bg-alt: #2c2c30;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 700;
+}
+
+/* Homepage cards */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0 48px;
+}
+
+@media (max-width: 768px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.home-card,
+.home-card:hover {
+  text-decoration: none !important;
+}
+
+.home-card * {
+  text-decoration: none !important;
+}
+
+.home-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 2px 12px var(--vp-c-brand-soft);
+}
+
+.home-card-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.home-card-title {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--vp-c-text-1);
+}
+
+.home-card-detail {
+  font-size: 1rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+}
+
+/* Glossary — stacked term/definition list */
+.glossary-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0 48px;
+}
+
+@media (max-width: 768px) {
+  .glossary-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glossary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 6px 6px 0;
+  color: inherit;
+  text-decoration: none !important;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.glossary-item:hover {
+  border-left-color: var(--vp-c-brand-2);
+  background: var(--vp-c-bg-alt);
+}
+
+.glossary-item * {
+  text-decoration: none !important;
+}
+
+.glossary-term {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+}
+
+.glossary-def {
+  font-size: 1rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.45;
+}
+
+/* Sidebar — top-level section title (e.g. Glossary, Guides) */
+.VPSidebarItem.level-0:first-child > .item > .text {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* Sidebar — page titles (e.g. Beacon, Pelagora) — override heading font */
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* Bold section header only when user is in that specific section */
+.VPSidebarItem.level-0.is-active > .item > .text {
+  font-weight: 700;
+}
+
+/* Sidebar — page titles (14px) */
+.VPSidebarItem.level-1 > .item .link > .text {
+  font-size: 14px;
+}
+
+/* Sidebar — sub-topics (13px) */
+.VPSidebarItem.level-2 > .item .link > .text {
+  font-size: 13px;
+}
+
+/* Breadcrumb-style page titles */
+.breadcrumb-parent {
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+/* Site logo and title */
+.VPNavBarTitle .logo {
+  height: 32px;
+  width: auto;
+}
+
+.VPNavBarTitle .title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Nav bar items — bigger and bold when active */
+.VPNavBarMenuLink {
+  font-size: 1rem !important;
+}
+
+.VPNavBarMenuLink.active {
+  font-weight: 700;
+}
+
+/* Wider search box on desktop */
+@media (min-width: 960px) {
+  .VPNavBarSearch .DocSearch-Button {
+    width: 230px;
+    justify-content: space-between;
+  }
+}
+
+/* Bold active sidebar link */
+.VPSidebarItem.level-1.is-active > .item .link > .text {
+  font-weight: 700;
+  color: var(--vp-c-brand-2) !important;
 }
