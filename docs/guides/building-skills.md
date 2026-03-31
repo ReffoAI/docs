@@ -37,7 +37,7 @@ export default class MySkill implements Skill {
 
 Skills are discovered automatically from `node_modules`. Use the naming pattern:
 
-- **Scoped:** `@reffo/skill-{name}` (official skills)
+- **Scoped:** `@pelagora/skill-{name}` (official skills)
 - **Community:** `pelagora-skill-{name}`
 
 ## Database access
@@ -106,14 +106,14 @@ getMcpTools() {
 
 ## Example: Reverse Auction skill
 
-See `@reffo/skill-reverse-auction` for a complete reference implementation that includes database tables, DHT messaging, HTTP routes, and MCP tools.
+See `@pelagora/skill-reverse-auction` for a complete reference implementation that includes database tables, DHT messaging, HTTP routes, and MCP tools.
 
 ## Installation
 
 Users install skills as npm packages:
 
 ```bash
-npm install @reffo/skill-reverse-auction
+npm install @pelagora/skill-reverse-auction
 ```
 
 The Pelagora skill loader automatically discovers and initializes installed skills on startup.
