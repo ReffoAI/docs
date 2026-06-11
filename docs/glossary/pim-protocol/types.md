@@ -8,7 +8,7 @@ import type { Ref, Offer, RefMedia, PeerMessage, PimRefsFeed } from '@pelagora/p
 
 ## Ref
 
-The fundamental data unit — a Schema.org-aligned reference to an item a Beacon owns. Location is stored as flat fields; the precise address is kept local and never shared.
+The fundamental data unit — a Schema.org-aligned reference to an item a Beacon owns. Location is stored as flat fields; the precise address is private by default (approximate, ~zip-code precision) and is only shared publicly when `locationVisibility` is explicitly `'exact'`.
 
 ```typescript
 interface Ref {
@@ -27,13 +27,20 @@ interface Ref {
   reffoRefId?: string;
   locationLat?: number;
   locationLng?: number;
-  locationAddress?: string;           // stored locally only, never shared
+  locationAddress?: string;           // private by default; shared only when locationVisibility = 'exact'
   locationCity?: string;
   locationState?: string;
   locationZip?: string;
   locationCountry?: string;
   sellingScope?: SellingScope;        // 'global' | 'national' | 'range'
   sellingRadiusMiles?: number;
+  locationVisibility?: LocationVisibility; // 'approximate' (default) | 'exact' — see below
+  startDate?: string;                 // ISO 8601 event start (garage sales, pop-ups, etc.)
+  endDate?: string;                   // ISO 8601 event end
+  timeZone?: string;                  // IANA name (e.g. 'America/New_York')
+  validFrom?: string;                 // Schema.org Offer.availabilityStarts (ISO 8601)
+  validThrough?: string;              // Schema.org Offer.availabilityThrough (ISO 8601)
+  eventType?: EventType;              // open vocabulary; see RECOMMENDED_EVENT_TYPES
   attributes?: Record<string, unknown>; // category-specific fields
   condition?: string;
   rentalTerms?: string;
@@ -54,6 +61,23 @@ interface Ref {
 ```
 
 `RefCreate` and `RefUpdate` are derived input types (`RefCreate` omits server-assigned fields; `RefUpdate = Partial<RefCreate>`).
+
+### `locationVisibility` (v0.7.0+)
+
+Controls how the beacon's address fields are shared by consumers. **Default semantics: absent = `'approximate'`** — coordinates are blurred to ~zip-code precision and `locationAddress` is never exposed. Set to `'exact'` for listings that intentionally share a public address (garage sales, estate sales, pop-ups).
+
+**Privacy is enforced by consumers** (Pelagora, agent surfaces) — they must blur coordinates and omit `locationAddress` unless this field is explicitly `'exact'`. The protocol field declares intent; the consumer enforces it.
+
+### Event / availability fields (v0.7.0+)
+
+| Field | Type | Notes |
+|---|---|---|
+| `startDate` | `string` (ISO 8601) | Event occurrence start. Use for time-boxed listings (garage sale Saturday 8am). |
+| `endDate` | `string` (ISO 8601) | Event occurrence end. |
+| `timeZone` | `string` (IANA) | e.g. `America/New_York`. When absent, `startDate`/`endDate` should carry a UTC offset. |
+| `validFrom` | `string` (ISO 8601) | When the listing becomes available (Schema.org `Offer.availabilityStarts`). |
+| `validThrough` | `string` (ISO 8601) | When the listing expires (Schema.org `Offer.availabilityThrough`). Consumers derive expiry at render time — the protocol does not auto-expire listings. |
+| `eventType` | `EventType` | Open vocabulary. Recommended values: `garage_sale`, `estate_sale`, `flea_market`, `pop_up`, `ticketed_event`. Any string is valid. |
 
 ### `sellerCheckoutUrl` (v0.6.0+)
 
